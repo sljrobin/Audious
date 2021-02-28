@@ -1,0 +1,15 @@
+{
+  "collection": {
+    "root": "/",
+    "playlists": "Playlists/",
+    "music": {
+      "artists": "Artists/",
+      "soundtracks": "Soundtracks/"
+    }
+  },
+  "exportation": {
+    "root": "/",
+    "playlists": "Playlists/",
+    "format": "flac"
+  }
+}
