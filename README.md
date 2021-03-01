@@ -237,7 +237,7 @@ ffmpeg -v quiet -y -i <song.flac> -codec:a libmp3lame -qscale:a 0 -map_metadata 
     * `-codec:a libmp3lame`: specifies to use the [libmp3lame codec](https://ffmpeg.org/ffmpeg-codecs.html#libmp3lame-1)
     * `-qscale:a 0`: controls quality, `0` being the lower value, it provides the higher quality possible
     * `-map_metadata 0`: properly maps the FLAC song metadata to the MP3 song metadata ([Source](https://stackoverflow.com/a/26109838))
-    * `-id3v2_version 3`: select [ID3v2.3](https://ffmpeg.org/ffmpeg-formats.html#mp3) for [ID3 metadata](https://en.wikipedia.org/wiki/ID3)
+    * `-id3v2_version 3`: selects [ID3v2.3](https://ffmpeg.org/ffmpeg-formats.html#mp3) for [ID3 metadata](https://en.wikipedia.org/wiki/ID3)
     * `<song.mp3>`: specifies the exported song in MP3 (note: _a full path is required_)
 
 #### MP3 encoding
