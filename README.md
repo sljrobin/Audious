@@ -47,7 +47,7 @@ Nowadays, space is cheap. But lossless music is still demanding in size. Having 
     * On macOS: `brew install ffmpeg lame`
     * On Linux (Debian-based): `sudo apt install ffmpeg lame`
 * Clone this repository: `git clone https://github.com/sljrobin/Audious`
-* Go to Audios directory: `cd Audious/`
+* Go to Audious directory: `cd Audious/`
 * Create and activate a [Python virtual environment](https://docs.python.org/3/library/venv.html):
     * `python3 -m venv venv`
     * `source ./venv/bin/activate`
