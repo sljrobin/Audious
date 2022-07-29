@@ -1,33 +1,33 @@
 <p align="center"><img width="30%" src="./docs/logo.png"/></p>
 
-__Audious__ is a _virtual assistant for music collections_. Amongst other things, it provides the ability to __manage albums__ by indicating the ones which are not in __playlists__. It also gives __detailed statistics__ about a music collection, such as the number of artists and albums or the overall duration of a music category. It can also be used to __sanitize playlists__ by showing corrupted or missing songs, and can __export playlists__ in different formats, such as FLAC or MP3.
+**Audious** is a *virtual assistant for music collections*. Amongst other things, it provides the ability to **manage albums** by indicating the ones which are not in **playlists**. It also gives **detailed statistics** about a music collection, such as the number of artists and albums or the overall duration of a music category. It can also be used to **sanitize playlists** by showing corrupted or missing songs, and can **export playlists** in different formats, such as FLAC or MP3.
 
 <p align="center">🎶</p>
 
 ### 🧠 Broaden your musical horizons
-The more your music collection will grow, the more it will be difficult to remember which albums and songs you liked or listened to. Playlists are there to help us reminding which songs or albums we liked. But there might be albums that you didn't place in a playlist. __Audious will help you managing the albums that are not present in your playlists.__
+The more your music collection will grow, the more it will be difficult to remember which albums and songs you liked or listened to. Playlists are there to help us reminding which songs or albums we liked. But there might be albums that you didn't place in a playlist. **Audious will help you managing the albums that are not present in your playlists.**
 
 <img width="100%" src="./docs/feature-pick.png" alt="Display the albums that are not in your playlists, yet!" title="Display the albums that are not in your playlists, yet!"/>
 
 ### 🔎 Learn to know your music collection
-Having information about the song currently being played or even the year of the album you want to listen to is easy. However, getting the number of artists and albums, or how finding long it would take you if you wanted to listen to your entire music collection, it's a different story. __Audious will give you statistics about your music collection as well as your playlists.__
+Having information about the song currently being played or even the year of the album you want to listen to is easy. However, getting the number of artists and albums, or how finding long it would take you if you wanted to listen to your entire music collection, it's a different story. **Audious will give you statistics about your music collection as well as your playlists.**
 
 <img width="100%" src="./docs/feature-statistics.png" alt="Get statistics of your music collection but also of your playlists!" title="Get statistics of your music collection but also of your playlists!"/>
 
 ### ❤️ Less is more
-Nowadays, space is cheap. But lossless music is still demanding in size. Having your entire music collection with you all the time on a phone might be impossible. __Audious will export all the songs of your playlists and ensure that your favorite songs will always be with you.__
+Nowadays, space is cheap. But lossless music is still demanding in size. Having your entire music collection with you all the time on a phone might be impossible. **Audious will export all the songs of your playlists and ensure that your favorite songs will always be with you.**
 <img width="100%" src="./docs/feature-export.png" alt="Export your playlists only to keep your favorite songs!" title="Export your playlists only to keep your favorite songs!"/>
 
 <p align="center">🎶</p>
 
-* [__Getting started__](#getting-started): This section provides everything that is required to install Audious. It also shows how to setup it properly.
+* [**Getting started**](#getting-started): This section provides everything that is required to install Audious. It also shows how to setup it properly.
     1. [Requirements](#requirements)
     2. [Installation](#installation)
     3. [Edit the preferences](#edit-the-preferences)
     4. [Launching Audious](#launching-audious)
-* [__Tips__](#tips): Several tips are given in this section to have a better user experience.
-* [__For Developers and Audiophiles__](#for-developers-and-audiophiles): Audious has been designed as an open source project since day 1. This section clarifies the tool's internals, explaining how to generate the source code documentation, and how the MP3 conversion is performed during the exportation process.
-* [__About__](#about): The origin of the project and the different licenses are detailed in this section.
+* [**Tips**](#tips): Several tips are given in this section to have a better user experience.
+* [**For Developers and Audiophiles**](#for-developers-and-audiophiles): Audious has been designed as an open source project since day 1. This section clarifies the tool's internals, explaining how to generate the source code documentation, and how the MP3 conversion is performed during the exportation process.
+* [**About**](#about): The origin of the project and the different licenses are detailed in this section.
 
 <p align="center">🎶</p>
 <p align="center"><q><i>Without music, life would be a mistake.</i></q> — F. Nietzsche</p>
@@ -80,14 +80,14 @@ Nowadays, space is cheap. But lossless music is still demanding in size. Having 
 #### Music collection: `collection`
 The `collection` key gives details about the music collection:
 
-* `root` is the _absolute path_ of the directory where is located the music collection
+* `root` is the *absolute path* of the directory where is located the music collection
 * `playlists` is the directory containing all the playlists
 * `music` gives the different categories of the music collection. For instance:
     * `artists` is the directory that contains all the Artists of the music collection
     * `soundtracks` on the other hand, contains only soundtracks
     * Other music categories can be added under the `music` key (e.g. `"spoken word": "Spoken Word/"`)
     * The `artists` and `soundtracks` keys are not mandatory, however, at least one key is required
-* __Note__: all given directories should have an ending `/` (e.g. `Artists/`, and not `Artists`)
+* **Note**: all given directories should have an ending `/` (e.g. `Artists/`, and not `Artists`)
 
 For instance, let's suppose that a simple music collection is structured as follow:
 
@@ -113,10 +113,10 @@ The `collection` key in `preferences.json` should be edited as shown below:
 #### Music exportation: `exportation`
 The `exportation` key gives details about the playlists exportation:
 
-* `root` is the _absolute path_ of the directory where will be located the exported songs and playlists
+* `root` is the *absolute path* of the directory where will be located the exported songs and playlists
 * `playlists` is the directory containing all the exported playlists
 * `format` is the format song for the playlists exportation; only two options are available: `flac` and `mp3`
-* __Note__: all given directories should have an ending `/` (e.g. `Artists/`, and not `Artists`)
+* **Note**: all given directories should have an ending `/` (e.g. `Artists/`, and not `Artists`)
 
 For instance, let's suppose that we create an `Export/` directory in the `Collection/` and we want to export all the songs of the playlists in FLAC; the `exportation` key in `preferences.json` should be edited as shown below:
 
@@ -233,15 +233,15 @@ ffmpeg -v quiet -y -i <song.flac> -codec:a libmp3lame -qscale:a 0 -map_metadata 
 * The parameters that were used are detailed below. They were carefully selected by following the [FFmpeg MP3 Encoding Guide](https://trac.ffmpeg.org/wiki/Encode/MP3).
     * `-v quiet`: does not produce any log on the console
     * `-y`: overwrites output files
-    * `-i <song.flac>`: gives a song in FLAC as input (note: _a full path is required_)
+    * `-i <song.flac>`: gives a song in FLAC as input (note: *a full path is required*)
     * `-codec:a libmp3lame`: specifies to use the [libmp3lame codec](https://ffmpeg.org/ffmpeg-codecs.html#libmp3lame-1)
     * `-qscale:a 0`: controls quality, `0` being the lower value, it provides the higher quality possible
     * `-map_metadata 0`: properly maps the FLAC song metadata to the MP3 song metadata ([Source](https://stackoverflow.com/a/26109838))
     * `-id3v2_version 3`: selects [ID3v2.3](https://ffmpeg.org/ffmpeg-formats.html#mp3) for [ID3 metadata](https://en.wikipedia.org/wiki/ID3)
-    * `<song.mp3>`: specifies the exported song in MP3 (note: _a full path is required_)
+    * `<song.mp3>`: specifies the exported song in MP3 (note: *a full path is required*)
 
 #### MP3 encoding
-* _VBR Encoding_ was preferred to _CBR Encoding_.
+* *VBR Encoding* was preferred to *CBR Encoding*.
 * `-qscale:a 0` is an equivalent of `-V 0` and produces an average of 245 kbps for each exported song.
 * More information about the settings is available [here](http://wiki.hydrogenaud.io/index.php?title=LAME#Recommended_encoder_settings).
 
@@ -255,7 +255,7 @@ ffmpeg -v quiet -y -i <song.flac> -codec:a libmp3lame -qscale:a 0 -map_metadata 
 
 ## About
 ### Audious
-The name “_Audious_” was taken from the _[HBO's Silicon Valley](https://www.hbo.com/silicon-valley/)_. In this comedy television series, “_Audious_” is also a virtual assistant but seems to have [more bugs](https://www.youtube.com/watch?v=2GgHaFvmY3s)!
+The name “*Audious*” was taken from the [*HBO's Silicon Valley*](https://www.hbo.com/silicon-valley/). In this comedy television series, “*Audious*” is also a virtual assistant but seems to have [more bugs](https://www.youtube.com/watch?v=2GgHaFvmY3s)!
 
 ### Licenses
 * [Audious](https://github.com/sljrobin/Audious/) is licensed under the MIT License ([Source](https://github.com/sljrobin/Audious/blob/main/LICENSE))
